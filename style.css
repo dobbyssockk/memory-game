@@ -1,0 +1,169 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body, html {
+    cursor: url('icon/cursor.png'), auto;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 60px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+}
+
+.card:hover {
+    scale: 1.1;
+    cursor: url('icon/cursor-hover.png'), pointer;
+}
+
+.card-front {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card-front img {
+    scale: 1.5;
+}
+
+/*flip*/
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+/*flip*/
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.container {
+    position: relative;
+    padding: 20px 0;
+    background-color: white;
+    display: flex;
+    max-width: 700px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.button{
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.button a{
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #FFA12B;
+    display: block;
+    position: relative;
+    padding: 8px 40px;
+    text-shadow: 0 1px 0 #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    border-radius: 5px;
+}
+
+.button a:hover {
+    cursor: url('icon/cursor-hover.png'), pointer;
+}
+
+.button a:active{
+    top: 10px;
+    background-color: #F78900;
+    box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.button:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: #2B1800;
+    border-radius: 5px;
+}
+
+.overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: 1000;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    font-size: 35px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+
+.no-select {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
