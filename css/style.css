@@ -10,10 +10,18 @@ html {
 }
 
 body, html {
-    cursor: url('../icon/cursor.png'), auto;
+    cursor: url('../icon/cursor-food.png'), auto;
+}
+
+.no-select {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .game {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -21,8 +29,92 @@ body, html {
     padding-top: 60px;
     width: 100vw;
     height: 100vh;
-    background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.container {
+    position: relative;
+}
+
+.cardboard {
+    position: relative;
+    padding: 20px 0;
+    background-color: white;
+    display: flex;
+    max-width: 700px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.themes {
+    position: absolute;
+    top: 50%;
+    transform: translate(-150%, -50%);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+}
+
+.theme {
+    position: relative;
+}
+
+.text {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -24%;
+    width: 80px;
+    padding: 2px 10px;
+    background-color: #666;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    opacity: 0;
+    transition: all 0.25s linear;
+}
+
+.theme:hover .text{
+    opacity: 1;
+}
+
+.theme:hover {
+    opacity: .9;
+}
+
+.theme__wrapper {
+    width: 50px;
+    height: 50px;
+}
+
+.food:hover {
+    cursor: url('../icon/cursor-food-hover.png'), pointer;
+}
+
+.animals:hover {
+    cursor: url('../icon/cursor-animals-hover.png'), pointer;
+}
+
+.anime:hover {
+    cursor: url("../icon/cursor-anime-hover.png"), pointer;
+}
+
+.minion:hover {
+    cursor: url("../icon/cursor-minion-hover.png"), pointer;
 }
 
 .card {
@@ -32,7 +124,22 @@ body, html {
 
 .card:hover {
     scale: 1.1;
-    cursor: url('../icon/cursor-hover.png'), pointer;
+}
+
+.cursor-food:hover {
+    cursor: url('../icon/cursor-food-hover.png'), pointer;
+}
+
+.cursor-animals:hover {
+    cursor: url('../icon/cursor-animals-hover.png'), pointer;
+}
+
+.cursor-anime:hover {
+    cursor: url('../icon/cursor-anime-hover.png'), pointer;
+}
+
+.cursor-minion:hover {
+    cursor: url('../icon/cursor-minion-hover.png'), pointer;
 }
 
 .card-front {
@@ -45,7 +152,6 @@ body, html {
 }
 
 /*flip*/
-
 .card-inner {
     position: relative;
     width: 100%;
@@ -69,27 +175,7 @@ body, html {
 .card-back {
     transform: rotateY(180deg);
 }
-
 /*flip*/
-
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-.container {
-    position: relative;
-    padding: 20px 0;
-    background-color: white;
-    display: flex;
-    max-width: 700px;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    border-radius: 20px;
-}
 
 .overlay {
     display: none;
@@ -99,26 +185,51 @@ img {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
-    opacity: .7;
+    background-color: rgba(0, 0, 0, .7);
     z-index: 1000;
 }
 
 .timer {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 80px;
     height: 80px;
     font-size: 35px;
     color: white;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 100%;
 }
 
-.no-select {
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 2px dashed #DAA06D;
+    border-radius: 15px;
+    background-color: #EADDCA;
+    box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+
+.title {
+    color: #DAA06D;
+    background-color: transparent;
+    font-size: 18px;
+    letter-spacing: 7px;
+}
+
+.subtitle {
+    color: #DAA06D;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 4px;
 }
