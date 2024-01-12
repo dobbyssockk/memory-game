@@ -94,29 +94,29 @@
              resetGame();
              if (btn.classList.contains('food')) {
                  theme = food;
-                 body.style.cursor = "url('icon/cursor-food.png'), auto";
-                 html.style.cursor = "url('icon/cursor-food.png'), auto";
+                 body.style.cursor = "url('icons/cursor-food.png'), auto";
+                 html.style.cursor = "url('icons/cursor-food.png'), auto";
                  game.style.backgroundImage = "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)";
                  cursor = 'cursor-food';
                  render(food, cursor);
              } else if (btn.classList.contains('animals')) {
                  theme = animals;
-                 body.style.cursor = "url('icon/cursor-animals.png'), auto";
-                 html.style.cursor = "url('icon/cursor-animals.png'), auto";
+                 body.style.cursor = "url('icons/cursor-animals.png'), auto";
+                 html.style.cursor = "url('icons/cursor-animals.png'), auto";
                  game.style.backgroundImage = "linear-gradient(160deg, #14de50 0%, #8eda8e 100%)";
                  cursor = 'cursor-animals';
                  render(animals, cursor);
              } else if (btn.classList.contains('anime')) {
                  theme = anime;
-                 body.style.cursor = "url('icon/cursor-anime.png'), auto";
-                 html.style.cursor = "url('icon/cursor-anime.png'), auto";
+                 body.style.cursor = "url('icons/cursor-anime.png'), auto";
+                 html.style.cursor = "url('icons/cursor-anime.png'), auto";
                  game.style.backgroundImage = "linear-gradient(315deg, #bdcad9 0%, #e1dada 74%)";
                  cursor = 'cursor-anime';
                  render(anime, cursor);
              } else if (btn.classList.contains('minion')) {
                  theme = minion;
-                 body.style.cursor = "url('icon/cursor-minion.png'), auto";
-                 html.style.cursor = "url('icon/cursor-minion.png'), auto";
+                 body.style.cursor = "url('icons/cursor-minion.png'), auto";
+                 html.style.cursor = "url('icons/cursor-minion.png'), auto";
                  game.style.backgroundImage = "linear-gradient(315deg, #fff293 0%, #ffe884 74%)";
                  cursor = 'cursor-minion';
                  render(minion, cursor);
@@ -142,7 +142,7 @@
 
      // Rendering cards
      function render(theme, cursor) {
-         shuffle(theme);
+         // shuffle(theme);
 
          const cardBoard = document.querySelector('.cardboard');
          cardBoard.innerHTML = '';

@@ -10,7 +10,7 @@ html {
 }
 
 body, html {
-    cursor: url('../icon/cursor-food.png'), auto;
+    cursor: url('../icons/cursor-food.png'), auto;
 }
 
 .no-select {
@@ -102,19 +102,19 @@ img {
 }
 
 .food:hover {
-    cursor: url('../icon/cursor-food-hover.png'), pointer;
+    cursor: url('../icons/cursor-food-hover.png'), pointer;
 }
 
 .animals:hover {
-    cursor: url('../icon/cursor-animals-hover.png'), pointer;
+    cursor: url('../icons/cursor-animals-hover.png'), pointer;
 }
 
 .anime:hover {
-    cursor: url("../icon/cursor-anime-hover.png"), pointer;
+    cursor: url("../icons/cursor-anime-hover.png"), pointer;
 }
 
 .minion:hover {
-    cursor: url("../icon/cursor-minion-hover.png"), pointer;
+    cursor: url("../icons/cursor-minion-hover.png"), pointer;
 }
 
 .card {
@@ -127,19 +127,19 @@ img {
 }
 
 .cursor-food:hover {
-    cursor: url('../icon/cursor-food-hover.png'), pointer;
+    cursor: url('../icons/cursor-food-hover.png'), pointer;
 }
 
 .cursor-animals:hover {
-    cursor: url('../icon/cursor-animals-hover.png'), pointer;
+    cursor: url('../icons/cursor-animals-hover.png'), pointer;
 }
 
 .cursor-anime:hover {
-    cursor: url('../icon/cursor-anime-hover.png'), pointer;
+    cursor: url('../icons/cursor-anime-hover.png'), pointer;
 }
 
 .cursor-minion:hover {
-    cursor: url('../icon/cursor-minion-hover.png'), pointer;
+    cursor: url('../icons/cursor-minion-hover.png'), pointer;
 }
 
 .card-front {
