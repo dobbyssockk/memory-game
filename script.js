@@ -4,79 +4,79 @@
 
      // Array with cards
      const food = [
-         {alt: 'burger', src: 'img/food/burger.png', bg: 'img/background-food.png'},
-         {alt: 'crabs', src: 'img/food/crabs.png', bg: 'img/background-food.png'},
-         {alt: 'drink', src: 'img/food/drink.png', bg: 'img/background-food.png'},
-         {alt: 'onigiri', src: 'img/food/onigiri.png', bg: 'img/background-food.png'},
-         {alt: 'pizza', src: 'img/food/pizza.png', bg: 'img/background-food.png'},
-         {alt: 'poke', src: 'img/food/poke.png', bg: 'img/background-food.png'},
-         {alt: 'ramen', src: 'img/food/ramen.png', bg: 'img/background-food.png'},
-         {alt: 'sushi', src: 'img/food/sushi.png', bg: 'img/background-food.png'},
-         {alt: 'burger', src: 'img/food/burger.png', bg: 'img/background-food.png'},
-         {alt: 'crabs', src: 'img/food/crabs.png', bg: 'img/background-food.png'},
-         {alt: 'drink', src: 'img/food/drink.png', bg: 'img/background-food.png'},
-         {alt: 'onigiri', src: 'img/food/onigiri.png', bg: 'img/background-food.png'},
-         {alt: 'pizza', src: 'img/food/pizza.png', bg: 'img/background-food.png'},
-         {alt: 'poke', src: 'img/food/poke.png', bg: 'img/background-food.png'},
-         {alt: 'ramen', src: 'img/food/ramen.png', bg: 'img/background-food.png'},
-         {alt: 'sushi', src: 'img/food/sushi.png', bg: 'img/background-food.png'}
+         {alt: 'burger', src: 'img/food/burger-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'crabs', src: 'img/food/crabs-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'drink', src: 'img/food/drink-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'onigiri', src: 'img/food/onigiri-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'pizza', src: 'img/food/pizza-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'poke', src: 'img/food/poke-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'ramen', src: 'img/food/ramen-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'sushi', src: 'img/food/sushi-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'burger', src: 'img/food/burger-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'crabs', src: 'img/food/crabs-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'drink', src: 'img/food/drink-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'onigiri', src: 'img/food/onigiri-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'pizza', src: 'img/food/pizza-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'poke', src: 'img/food/poke-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'ramen', src: 'img/food/ramen-min.png', bg: 'img/bg-food-min.png'},
+         {alt: 'sushi', src: 'img/food/sushi-min.png', bg: 'img/bg-food-min.png'}
      ];
 
      const animals = [
-         {alt: 'bear', src: 'img/animals/bear.png', bg: 'img/background-animals.png'},
-         {alt: 'cat', src: 'img/animals/cat.png', bg: 'img/background-animals.png'},
-         {alt: 'dog', src: 'img/animals/dog.png', bg: 'img/background-animals.png'},
-         {alt: 'elephant', src: 'img/animals/elephant.png', bg: 'img/background-animals.png'},
-         {alt: 'fox', src: 'img/animals/fox.png', bg: 'img/background-animals.png'},
-         {alt: 'monkey', src: 'img/animals/monkey.png', bg: 'img/background-animals.png'},
-         {alt: 'owl', src: 'img/animals/owl.png', bg: 'img/background-animals.png'},
-         {alt: 'rabbit', src: 'img/animals/rabbit.png', bg: 'img/background-animals.png'},
-         {alt: 'bear', src: 'img/animals/bear.png', bg: 'img/background-animals.png'},
-         {alt: 'cat', src: 'img/animals/cat.png', bg: 'img/background-animals.png'},
-         {alt: 'dog', src: 'img/animals/dog.png', bg: 'img/background-animals.png'},
-         {alt: 'elephant', src: 'img/animals/elephant.png', bg: 'img/background-animals.png'},
-         {alt: 'fox', src: 'img/animals/fox.png', bg: 'img/background-animals.png'},
-         {alt: 'monkey', src: 'img/animals/monkey.png', bg: 'img/background-animals.png'},
-         {alt: 'owl', src: 'img/animals/owl.png', bg: 'img/background-animals.png'},
-         {alt: 'rabbit', src: 'img/animals/rabbit.png', bg: 'img/background-animals.png'}
+         {alt: 'bear', src: 'img/animals/bear-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'cat', src: 'img/animals/cat-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'dog', src: 'img/animals/dog-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'elephant', src: 'img/animals/elephant-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'fox', src: 'img/animals/fox-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'monkey', src: 'img/animals/monkey-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'owl', src: 'img/animals/owl-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'rabbit', src: 'img/animals/rabbit-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'bear', src: 'img/animals/bear-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'cat', src: 'img/animals/cat-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'dog', src: 'img/animals/dog-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'elephant', src: 'img/animals/elephant-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'fox', src: 'img/animals/fox-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'monkey', src: 'img/animals/monkey-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'owl', src: 'img/animals/owl-min.png', bg: 'img/bg-animals-min.png'},
+         {alt: 'rabbit', src: 'img/animals/rabbit-min.png', bg: 'img/bg-animals-min.png'}
      ];
 
      const anime = [
-         {alt: 'boy', src: 'img/anime/boy.png', bg: 'img/background-anime.png'},
-         {alt: 'bunny ears', src: 'img/anime/bunny-ears.png', bg: 'img/background-anime.png'},
-         {alt: 'with cloak', src: 'img/anime/cloak.png', bg: 'img/background-anime.png'},
-         {alt: 'girl', src: 'img/anime/girl.png', bg: 'img/background-anime.png'},
-         {alt: 'pink hair', src: 'img/anime/pink-hair.png', bg: 'img/background-anime.png'},
-         {alt: 'ponytails', src: 'img/anime/ponytails.png', bg: 'img/background-anime.png'},
-         {alt: 'white dress', src: 'img/anime/white-dress.png', bg: 'img/background-anime.png'},
-         {alt: 'white hair', src: 'img/anime/white-hair.png', bg: 'img/background-anime.png'},
-         {alt: 'boy', src: 'img/anime/boy.png', bg: 'img/background-anime.png'},
-         {alt: 'bunny ears', src: 'img/anime/bunny-ears.png', bg: 'img/background-anime.png'},
-         {alt: 'with cloak', src: 'img/anime/cloak.png', bg: 'img/background-anime.png'},
-         {alt: 'girl', src: 'img/anime/girl.png', bg: 'img/background-anime.png'},
-         {alt: 'pink hair', src: 'img/anime/pink-hair.png', bg: 'img/background-anime.png'},
-         {alt: 'ponytails', src: 'img/anime/ponytails.png', bg: 'img/background-anime.png'},
-         {alt: 'white dress', src: 'img/anime/white-dress.png', bg: 'img/background-anime.png'},
-         {alt: 'white hair', src: 'img/anime/white-hair.png', bg: 'img/background-anime.png'}
+         {alt: 'boy', src: 'img/anime/boy-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'bunny ears', src: 'img/anime/bunny-ears-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'with cloak', src: 'img/anime/cloak-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'girl', src: 'img/anime/girl-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'pink hair', src: 'img/anime/pink-hair-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'ponytails', src: 'img/anime/ponytails-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'white dress', src: 'img/anime/white-dress-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'white hair', src: 'img/anime/white-hair-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'boy', src: 'img/anime/boy-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'bunny ears', src: 'img/anime/bunny-ears-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'with cloak', src: 'img/anime/cloak-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'girl', src: 'img/anime/girl-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'pink hair', src: 'img/anime/pink-hair-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'ponytails', src: 'img/anime/ponytails-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'white dress', src: 'img/anime/white-dress-min.png', bg: 'img/bg-anime-min.png'},
+         {alt: 'white hair', src: 'img/anime/white-hair-min.png', bg: 'img/bg-anime-min.png'}
      ];
 
      const minion = [
-         {alt: 'chef', src: 'img/minion/chef.png', bg: 'img/background-minion.png'},
-         {alt: 'cyborg', src: 'img/minion/cyborg.png', bg: 'img/background-minion.png'},
-         {alt: 'devil', src: 'img/minion/devil.png', bg: 'img/background-minion.png'},
-         {alt: 'magician', src: 'img/minion/magician.png', bg: 'img/background-minion.png'},
-         {alt: 'pirate', src: 'img/minion/pirate.png', bg: 'img/background-minion.png'},
-         {alt: 'police', src: 'img/minion/police.png', bg: 'img/background-minion.png'},
-         {alt: 'police with beard', src: 'img/minion/police-with-beard.png', bg: 'img/background-minion.png'},
-         {alt: 'scout', src: 'img/minion/scout.png', bg: 'img/background-minion.png'},
-         {alt: 'chef', src: 'img/minion/chef.png', bg: 'img/background-minion.png'},
-         {alt: 'cyborg', src: 'img/minion/cyborg.png', bg: 'img/background-minion.png'},
-         {alt: 'devil', src: 'img/minion/devil.png', bg: 'img/background-minion.png'},
-         {alt: 'magician', src: 'img/minion/magician.png', bg: 'img/background-minion.png'},
-         {alt: 'pirate', src: 'img/minion/pirate.png', bg: 'img/background-minion.png'},
-         {alt: 'police', src: 'img/minion/police.png', bg: 'img/background-minion.png'},
-         {alt: 'police with beard', src: 'img/minion/police-with-beard.png', bg: 'img/background-minion.png'},
-         {alt: 'scout', src: 'img/minion/scout.png', bg: 'img/background-minion.png'}
+         {alt: 'chef', src: 'img/minion/chef-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'cyborg', src: 'img/minion/cyborg-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'devil', src: 'img/minion/devil-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'magician', src: 'img/minion/magician-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'pirate', src: 'img/minion/pirate-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'police', src: 'img/minion/police-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'police with beard', src: 'img/minion/police-with-beard-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'scout', src: 'img/minion/scout-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'chef', src: 'img/minion/chef-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'cyborg', src: 'img/minion/cyborg-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'devil', src: 'img/minion/devil-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'magician', src: 'img/minion/magician-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'pirate', src: 'img/minion/pirate-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'police', src: 'img/minion/police-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'police with beard', src: 'img/minion/police-with-beard-min.png', bg: 'img/bg-minion-min.png'},
+         {alt: 'scout', src: 'img/minion/scout-min.png', bg: 'img/bg-minion-min.png'}
      ];
 
      // Changing theme and cursor
@@ -90,7 +90,7 @@
 
      themeBtns.forEach((btn) => {
          btn.addEventListener('click', () => {
-             audio.play();
+             audioStart.play();
              resetGame();
              if (btn.classList.contains('food')) {
                  theme = food;
@@ -138,9 +138,11 @@
      // Counting matched cards
      let counter = 0;
 
+     const audioMatch = new Audio('match.wav');
+
      // Rendering cards
      function render(theme, cursor) {
-         shuffle(theme);
+         // shuffle(theme);
 
          const cardBoard = document.querySelector('.cardboard');
          cardBoard.innerHTML = '';
@@ -167,6 +169,7 @@
                  if (!isGameRunning) return;
 
                  selectedItems.push(card);
+                 console.log(selectedItems.length);
                  card.classList.add('flip');
 
                  if (selectedItems.length === 2) {
@@ -178,6 +181,7 @@
                              selectedItems = [];
                          }, 1000);
                      } else {
+                         audioMatch.play();
                          selectedItems = [];
                          counter +=1;
                          console.log(counter);
@@ -205,6 +209,8 @@
      const overlay = document.querySelector('.overlay');
 
      async function startGame (theme, cursor) {
+         counter = 0;
+         selectedItems = [];
          render(theme, cursor);
 
          isGameRunning = true;
@@ -236,11 +242,14 @@
 
      function resetGame () {
          isGameRunning = false;
+         counter = 0;
          selectedItems = [];
      }
 
      async function endGame () {
          isGameRunning = false;
+         counter = 0;
+         selectedItems = [];
 
          // Auto flip last two cards
          await sleep(500);
@@ -263,10 +272,10 @@
          })
      }
 
-     const audio = new Audio('click-sound.mp3');
+     const audioStart = new Audio('click-sound.mp3');
 
      btnStart.addEventListener('click', () => {
-         audio.play();
+         audioStart.play();
          startGame(theme, cursor);
      });
 
