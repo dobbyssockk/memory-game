@@ -33,13 +33,16 @@
          }
      }
 
+     // Counting matched cards
      let counter = 0;
 
+     // Rendering cards
      function render() {
          shuffle(gameItems);
 
          const container = document.querySelector('.container');
          container.innerHTML = '';
+
          gameItems.forEach((item) => {
              const card = document.createElement('div');
              card.classList.add('card');
@@ -75,7 +78,7 @@
                          selectedItems = [];
                          counter +=1;
                          console.log(counter);
-                         if (counter === 8) {
+                         if (counter === 7) {
                              counter = 0;
                              endGame();
                          }
@@ -84,7 +87,6 @@
              })
          });
      }
-
      render();
 
      const sleep = (ms) => {
@@ -95,21 +97,27 @@
          })
      };
 
-     const btn = document.querySelector('.button');
+     const btn = document.querySelector('.btn-start');
 
      async function startGame () {
          render();
+
          isGameRunning = true;
+
          const overlay = document.querySelector('.overlay');
          const timer = document.querySelector('.timer');
          overlay.style.display = 'flex';
+
+         // Countdown timer
          timer.innerHTML = '3';
          await sleep(1000);
          timer.innerHTML = '2';
          await sleep(1000);
          timer.innerHTML = '1';
          await sleep(1000);
+
          overlay.style.display = 'none';
+
          const cards = document.querySelectorAll('.card');
          cards.forEach((card) => {
              card.classList.add('flip');
@@ -122,9 +130,16 @@
 
      async function endGame () {
          isGameRunning = false;
-         await sleep(1000);
-         alert('Congratulations! You won =)');
+
+         // Auto flip last two cards
+         await sleep(500);
          const cards = document.querySelectorAll('.card');
+         cards.forEach((card) => {
+             card.classList.add('flip');
+         })
+
+         await sleep(500);
+         alert('Congratulations! You won =)');
          cards.forEach((card) => {
              card.classList.remove('flip');
          })

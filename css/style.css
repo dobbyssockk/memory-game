@@ -1,3 +1,6 @@
+@import "buttons.css";
+@import "normalize.css";
+
 html {
     box-sizing: border-box;
 }
@@ -7,7 +10,7 @@ html {
 }
 
 body, html {
-    cursor: url('icon/cursor.png'), auto;
+    cursor: url('../icon/cursor.png'), auto;
 }
 
 .game {
@@ -20,7 +23,6 @@ body, html {
     height: 100vh;
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-
 }
 
 .card {
@@ -30,7 +32,7 @@ body, html {
 
 .card:hover {
     scale: 1.1;
-    cursor: url('icon/cursor-hover.png'), pointer;
+    cursor: url('../icon/cursor-hover.png'), pointer;
 }
 
 .card-front {
@@ -87,53 +89,6 @@ img {
     gap: 20px;
     justify-content: center;
     border-radius: 20px;
-}
-
-.button{
-    position: relative;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.button a{
-    color: white;
-    font-family: Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 22px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: #FFA12B;
-    display: block;
-    position: relative;
-    padding: 8px 40px;
-    text-shadow: 0 1px 0 #000;
-    filter: dropshadow(color=#000, offx=0px, offy=1px);
-    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-    border-radius: 5px;
-}
-
-.button a:hover {
-    cursor: url('icon/cursor-hover.png'), pointer;
-}
-
-.button a:active{
-    top: 10px;
-    background-color: #F78900;
-    box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-}
-
-.button:after{
-    content: "";
-    height: 100%;
-    width: 100%;
-    padding: 4px;
-    position: absolute;
-    bottom: -15px;
-    left: -4px;
-    z-index: -1;
-    background-color: #2B1800;
-    border-radius: 5px;
 }
 
 .overlay {
