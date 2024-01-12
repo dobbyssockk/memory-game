@@ -97,7 +97,7 @@
          })
      };
 
-     const btn = document.querySelector('.btn-start');
+     const btnStart = document.querySelector('.btn-start');
 
      async function startGame () {
          render();
@@ -145,5 +145,11 @@
          })
      }
 
-     btn.addEventListener('click', startGame);
+     const audio = new Audio('click-sound.mp3');
+
+     btnStart.addEventListener('click', () => {
+         audio.play();
+         startGame();
+     });
+
  })
