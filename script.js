@@ -138,11 +138,11 @@
      // Counting matched cards
      let counter = 0;
 
-     const audioMatch = new Audio('match.mp3');
+     const audioMatch = new Audio('match.wav');
 
      // Rendering cards
      function render(theme, cursor) {
-         // shuffle(theme);
+         shuffle(theme);
 
          const cardBoard = document.querySelector('.cardboard');
          cardBoard.innerHTML = '';
