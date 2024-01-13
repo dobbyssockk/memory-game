@@ -139,6 +139,7 @@
      let counter = 0;
 
      const audioMatch = new Audio('match.wav');
+     const audioCardClick = new Audio('click-card.wav');
 
      // Rendering cards
      function render(theme, cursor) {
@@ -171,6 +172,7 @@
                  selectedItems.push(card);
                  console.log(selectedItems.length);
                  card.classList.add('flip');
+                 audioCardClick.play();
 
                  if (selectedItems.length === 2) {
                      const [firstItem, secondItem] = selectedItems;
