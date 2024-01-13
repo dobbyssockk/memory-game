@@ -39,7 +39,7 @@
 
     <div class="game">
         <div class="container">
-            <div class="game__themes">
+            <div class="game__left-column">
                 <div class="btn game__theme food">
                     <div class="game__theme-wrapper">
                         <img src="icons/food-min.png" alt="roll">
@@ -65,12 +65,21 @@
                     <span class="game__text">Minion</span>
                 </div>
             </div>
-            <div class="game__cardboard"></div>
-        </div>
 
-        <div ontouchstart="">
-            <div class="btn btn-start btn_yellow">
-                <a href="#">start</a>
+            <div class="game__middle-column">
+                <div class="game__cardboard"></div>
+                <div ontouchstart="">
+                    <div class="btn btn-start btn_yellow">
+                        <a href="#">start</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game__right-column">
+                <div class="game__score">
+                    <div class="game__indicator"></div>
+                    <div class="game__score-text">Your score: <span>0</span></div>
+                </div>
             </div>
         </div>
     </div>

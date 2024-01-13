@@ -102,7 +102,7 @@
                  theme = animals;
                  body.style.cursor = "url('icons/cursor-animals.png'), auto";
                  html.style.cursor = "url('icons/cursor-animals.png'), auto";
-                 game.style.backgroundImage = "linear-gradient(160deg, #14de50 0%, #8eda8e 100%)";
+                 game.style.backgroundImage = "linear-gradient(160deg, #eca372 0%, #e1ac71 100%)";
                  cursor = 'cursor-animals';
                  render(animals, cursor);
              } else if (btn.classList.contains('anime')) {
@@ -116,7 +116,7 @@
                  theme = minion;
                  body.style.cursor = "url('icons/cursor-minion.png'), auto";
                  html.style.cursor = "url('icons/cursor-minion.png'), auto";
-                 game.style.backgroundImage = "linear-gradient(315deg, #fff293 0%, #ffe884 74%)";
+                 game.style.backgroundImage = "linear-gradient(315deg, rgb(226 215 129) 0%, rgb(226 190 35) 74%)";
                  cursor = 'cursor-minion';
                  render(minion, cursor);
              }
@@ -139,6 +139,11 @@
 
      const audioMatch = new Audio('match.wav');
      const audioCardClick = new Audio('click-card.wav');
+     const indicator = document.querySelector('.game__indicator');
+     let totalScore = 0;
+     const score = document.querySelector('.game__score span');
+
+     const measure = 15;
 
      // Rendering cards
      function render(theme, cursor) {
@@ -169,7 +174,6 @@
                  if (!isGameRunning) return;
 
                  selectedItems.push(card);
-                 console.log(selectedItems.length);
                  card.classList.add('flip');
                  audioCardClick.play();
 
@@ -181,17 +185,33 @@
                              secondItem.classList.remove('flip');
                              selectedItems = [];
                          }, 1000);
+                         indicator.style.color = 'red';
+                         indicator.textContent = `-${measure}`;
+                         totalScore -= measure;
+                         score.textContent = totalScore;
                      } else {
                          audioMatch.play();
+                         indicator.style.color = 'darkgreen';
+                         indicator.textContent = `+${measure}`;
+                         totalScore += measure;
+                         score.textContent = totalScore;
                          selectedItems = [];
                          counter +=1;
-                         console.log(counter);
                          if (counter === 7) {
+                             indicator.style.color = 'darkgreen';
+                             indicator.textContent = `+${measure}`;
+                             totalScore += measure;
+                             score.textContent = totalScore;
                              counter = 0;
                              selectedItems = [];
                              endGame();
                          }
                      }
+                 }
+                 if (totalScore < 0) {
+                     score.style.color = 'red';
+                 } else {
+                     score.style.color = 'darkgreen';
                  }
              })
          });
@@ -231,7 +251,7 @@
          overlay.style.display = 'none';
          timer.style.display = 'none';
 
-         const cards = document.querySelectorAll('.card');
+         const cards = document.querySelectorAll('.game__card');
          cards.forEach((card) => {
              card.classList.add('flip');
          })
@@ -254,7 +274,7 @@
 
          // Auto flip last two cards
          await sleep(500);
-         const cards = document.querySelectorAll('.card');
+         const cards = document.querySelectorAll('.game__card');
          cards.forEach((card) => {
              card.classList.add('flip');
          })

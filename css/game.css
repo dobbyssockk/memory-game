@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    /*justify-content: flex-start;*/
     align-items: center;
     padding-top: 60px;
     width: 100vw;
@@ -11,29 +11,43 @@
 }
 
 .game .container {
-    position: relative;
+    display: flex;
+    flex-direction: row;
 }
 
-.game__themes {
-    position: absolute;
-    top: 50%;
-    transform: translate(-150%, -50%);
-    left: 0;
+.game__left-column {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     row-gap: 26px;
+    margin-right: 20px;
 }
 
+.game__middle-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game__right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+/*Left column*/
 .game__theme {
     position: relative;
 }
 
-.game__theme:hover .text{
+.game__theme:hover .game__text{
     opacity: 1;
 }
 
 .game__theme:hover {
-    opacity: .9;
+    opacity: .8;
 }
 
 .game__theme-wrapper {
@@ -46,7 +60,7 @@
     position: absolute;
     top: -50%;
     left: -24%;
-    width: 80px;
+    width: 70px;
     padding: 2px 10px;
     background-color: #666;
     color: #fff;
@@ -76,6 +90,7 @@
     cursor: url("../icons/cursor-minion-hover.png"), pointer;
 }
 
+/*Middle column*/
 .game__cardboard {
     position: relative;
     padding: 20px 0;
@@ -147,3 +162,30 @@
     transform: rotateY(180deg);
 }
 /*flip*/
+
+/*Right column*/
+.game__score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    border: 2px dashed #4531a5;
+    border-radius: 20px;
+}
+
+.game__indicator {
+    margin-bottom: 5px;
+}
+
+.game__score-text {
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.game__score span {
+    color: darkgreen;
+}
