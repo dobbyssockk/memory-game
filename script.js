@@ -80,13 +80,12 @@
      ];
 
      // Changing theme and cursor
-     const themeBtns = document.querySelectorAll('.theme');
+     const themeBtns = document.querySelectorAll('.game__theme');
      let theme = food;
      let cursor = 'cursor-food';
      const body = document.querySelector('body'),
            html = document.querySelector('html'),
-           game = document.querySelector('.game'),
-           btns = document.querySelectorAll('.btn');
+           game = document.querySelector('.game');
 
      themeBtns.forEach((btn) => {
          btn.addEventListener('click', () => {
@@ -145,20 +144,20 @@
      function render(theme, cursor) {
          shuffle(theme);
 
-         const cardBoard = document.querySelector('.cardboard');
+         const cardBoard = document.querySelector('.game__cardboard');
          cardBoard.innerHTML = '';
 
          theme.forEach((item) => {
              const card = document.createElement('div');
-             card.classList.add('card');
+             card.classList.add('game__card');
              card.classList.add(cursor);
              card.setAttribute('data-alt', item.alt);
              card.innerHTML = `
-                <div class="card-inner">
-                    <div class="card-front">
+                <div class="game__card-inner">
+                    <div class="game__card-front">
                         <img src="${item.bg}" alt="background" class="no-select" draggable="false" ondragstart="return false;">
                     </div>
-                    <div class="card-back">
+                    <div class="game__card-back">
                         <img src="${item.src}" alt="${item.alt}" class="no-select" draggable="false" ondragstart="return false;">
                     </div>
                 </div>
