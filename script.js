@@ -61,22 +61,22 @@
      ];
 
      const minion = [
-         {alt: 'chef', src: 'img/minion/chef-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'cyborg', src: 'img/minion/cyborg-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'devil', src: 'img/minion/devil-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'magician', src: 'img/minion/magician-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'pirate', src: 'img/minion/pirate-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'police', src: 'img/minion/police-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'police with beard', src: 'img/minion/police-with-beard-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'scout', src: 'img/minion/scout-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'chef', src: 'img/minion/chef-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'cyborg', src: 'img/minion/cyborg-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'devil', src: 'img/minion/devil-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'magician', src: 'img/minion/magician-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'pirate', src: 'img/minion/pirate-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'police', src: 'img/minion/police-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'police with beard', src: 'img/minion/police-with-beard-min.png', bg: 'img/bg-minion-min.png'},
-         {alt: 'scout', src: 'img/minion/scout-min.png', bg: 'img/bg-minion-min.png'}
+         {alt: 'chef', src: 'img/minion/chef-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'cyborg', src: 'img/minion/cyborg-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'devil', src: 'img/minion/devil-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'magician', src: 'img/minion/magician-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'pirate', src: 'img/minion/pirate-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'police', src: 'img/minion/police-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'police with beard', src: 'img/minion/police-with-beard-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'scout', src: 'img/minion/scout-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'chef', src: 'img/minion/chef-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'cyborg', src: 'img/minion/cyborg-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'devil', src: 'img/minion/devil-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'magician', src: 'img/minion/magician-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'pirate', src: 'img/minion/pirate-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'police', src: 'img/minion/police-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'police with beard', src: 'img/minion/police-with-beard-min.png', bg: 'img/bg-minion-min.jpg'},
+         {alt: 'scout', src: 'img/minion/scout-min.png', bg: 'img/bg-minion-min.jpg'}
      ];
 
      // Changing theme and cursor
@@ -143,11 +143,16 @@
      let totalScore = 0;
      const score = document.querySelector('.game__score span');
 
-     const measure = 15;
+     const correct = 15;
+     const incorrect = 5;
 
      // Rendering cards
      function render(theme, cursor) {
          shuffle(theme);
+
+         indicator.textContent = '';
+         totalScore = 0;
+         score.textContent = '';
 
          const cardBoard = document.querySelector('.game__cardboard');
          cardBoard.innerHTML = '';
@@ -186,21 +191,21 @@
                              selectedItems = [];
                          }, 1000);
                          indicator.style.color = 'red';
-                         indicator.textContent = `-${measure}`;
-                         totalScore -= measure;
+                         indicator.textContent = `-${incorrect}`;
+                         totalScore -= incorrect;
                          score.textContent = totalScore;
                      } else {
                          audioMatch.play();
                          indicator.style.color = 'darkgreen';
-                         indicator.textContent = `+${measure}`;
-                         totalScore += measure;
+                         indicator.textContent = `+${correct}`;
+                         totalScore += correct;
                          score.textContent = totalScore;
                          selectedItems = [];
                          counter +=1;
                          if (counter === 7) {
                              indicator.style.color = 'darkgreen';
-                             indicator.textContent = `+${measure}`;
-                             totalScore += measure;
+                             indicator.textContent = `+${correct}`;
+                             totalScore += correct;
                              score.textContent = totalScore;
                              counter = 0;
                              selectedItems = [];
@@ -285,6 +290,9 @@
          modal.style.display = 'flex';
 
          await sleep(2000);
+         indicator.textContent = '';
+         totalScore = 0;
+         score.textContent = '';
          overlay.style.display = 'none';
          modal.style.display = 'none';
 

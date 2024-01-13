@@ -2,6 +2,7 @@
 @import "overlay.css";
 @import "buttons.css";
 @import "game.css";
+@import "media.css";
 
 html {
     box-sizing: border-box;
