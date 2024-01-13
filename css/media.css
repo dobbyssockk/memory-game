@@ -48,7 +48,7 @@
 
 @media (max-width: 576px) {
     .overlay {
-        min-height: 175vh;
+        min-height: 305vh;
     }
     .game {
         min-height: 175vh;
