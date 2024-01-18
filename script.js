@@ -85,7 +85,8 @@
      let cursor = 'cursor-food';
      const body = document.querySelector('body'),
            html = document.querySelector('html'),
-           game = document.querySelector('.game');
+           game = document.querySelector('.game'),
+           gameScore = document.querySelector('.game__score');
 
      themeBtns.forEach((btn) => {
          btn.addEventListener('click', () => {
@@ -97,6 +98,7 @@
                  html.style.cursor = "url('icons/cursor-food.png'), auto";
                  game.style.backgroundImage = "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)";
                  cursor = 'cursor-food';
+                 gameScore.style.border = '2px solid #3498db';
                  render(food, cursor);
              } else if (btn.classList.contains('animals')) {
                  theme = animals;
@@ -104,6 +106,7 @@
                  html.style.cursor = "url('icons/cursor-animals.png'), auto";
                  game.style.backgroundImage = "linear-gradient(160deg, #eca372 0%, #e1ac71 100%)";
                  cursor = 'cursor-animals';
+                 gameScore.style.border = '2px solid #ef8360';
                  render(animals, cursor);
              } else if (btn.classList.contains('anime')) {
                  theme = anime;
@@ -111,6 +114,7 @@
                  html.style.cursor = "url('icons/cursor-anime.png'), auto";
                  game.style.backgroundImage = "linear-gradient(315deg, #bdcad9 0%, #e1dada 74%)";
                  cursor = 'cursor-anime';
+                 gameScore.style.border = '2px solid #b4a4b8';
                  render(anime, cursor);
              } else if (btn.classList.contains('minion')) {
                  theme = minion;
@@ -118,6 +122,7 @@
                  html.style.cursor = "url('icons/cursor-minion.png'), auto";
                  game.style.backgroundImage = "linear-gradient(315deg, rgb(226 215 129) 0%, rgb(226 190 35) 74%)";
                  cursor = 'cursor-minion';
+                 gameScore.style.border = '2px solid #f2e50e';
                  render(minion, cursor);
              }
          })
